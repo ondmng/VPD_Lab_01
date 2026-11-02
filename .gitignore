@@ -1,0 +1,22 @@
+﻿# Compiled files
+*.exe
+*.o
+*.obj
+*.class
+*.dll
+*.pdb
+
+# Build directories
+bin/
+obj/
+dist/
+target/
+
+# Dependencies
+node_modules/
+
+# IDE settings
+.vscode/
+
+# Temporary files
+*.tmp
