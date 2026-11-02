@@ -158,7 +158,7 @@ rustc .\\src\\rust\\main.rs -o .\\src\\rust\\main.exe
 
 ```powershell
 
-\& "C:\\Program Files\\Git\\bin\\bash.exe" .\\src\\bash\\main.sh
+& "C:\Program Files\Git\bin\bash.exe" .\src\bash\main.sh
 
 ```
 
@@ -170,7 +170,7 @@ rustc .\\src\\rust\\main.rs -o .\\src\\rust\\main.exe
 
 ```powershell
 
-\& "C:\\Program Files\\swipl\\bin\\swipl.exe" -q -s .\\src\\prolog\\main.pl
+& "C:\Program Files\swipl\bin\swipl.exe" -q -s .\src\prolog\main.pl
 
 ```
 
