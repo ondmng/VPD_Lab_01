@@ -12,7 +12,7 @@
 
 ```powershell
 
-gcc -finput-charset=UTF-8 -fexec-charset=UTF-8 -Wall -Wextra -pedantic .\\src\\c\\main.c -o .\\src\\c\\main.exe
+gcc -finput-charset=UTF-8 -fexec-charset=UTF-8 .\\src\\c\\main.c -o .\\src\\c\\main.exe
 
 .\\src\\c\\main.exe
 
@@ -26,7 +26,7 @@ gcc -finput-charset=UTF-8 -fexec-charset=UTF-8 -Wall -Wextra -pedantic .\\src\\c
 
 ```powershell
 
-g++ -finput-charset=UTF-8 -fexec-charset=UTF-8 -Wall -Wextra -pedantic .\\src\\cpp\\main.cpp -o .\\src\\cpp\\main.exe
+g++ -finput-charset=UTF-8 -fexec-charset=UTF-8 .\\src\\cpp\\main.cpp -o .\\src\\cpp\\main.exe
 
 .\\src\\cpp\\main.exe
 
