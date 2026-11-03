@@ -1,200 +1,89 @@
-\# Сборка и запуск программ
+# Сборка и запуск программ
 
+Все команды выполняются в PowerShell из корневого каталога проекта C:\VPD_Lab_01.
 
+## 1. C
 
-Все команды выполняются из корневого каталога проекта `C:\\VPD\_Lab\_01`.
 
+gcc -fexec-charset=UTF-8 .\src\c\main.c -o .\src\c\main.exe
+.\src\c\main.exe
 
 
-\## 1. C
+## 2. C++
 
 
+g++ -fexec-charset=UTF-8 .\src\cpp\main.cpp -o .\src\cpp\main.exe
+.\src\cpp\main.exe
 
-```powershell
 
-gcc -finput-charset=UTF-8 -fexec-charset=UTF-8 .\\src\\c\\main.c -o .\\src\\c\\main.exe
+## 3. Python
 
-.\\src\\c\\main.exe
 
-```
+python .\src\python\main.py
 
 
+## 4. JavaScript
 
-\## 2. C++
 
+node .\src\javascript\main.js
 
 
-```powershell
+## 5. TypeScript
 
-g++ -finput-charset=UTF-8 -fexec-charset=UTF-8 .\\src\\cpp\\main.cpp -o .\\src\\cpp\\main.exe
 
-.\\src\\cpp\\main.exe
+tsc.cmd .\src\typescript\main.ts --target ES2020 --outDir .\src\typescript\dist
+node .\src\typescript\dist\main.js
 
-```
 
+## 6. Java
 
 
-\## 3. Python
+javac -encoding UTF-8 .\src\java\Main.java
+java -cp .\src\java Main
+Get-Item .\src\java\Main.class
+javap -c -cp .\src\java Main
 
 
+## 7. C#
 
-```powershell
 
-python .\\src\\python\\main.py
+dotnet run --project .\src\csharp\app
 
-```
 
+## 8. F#
 
 
-\## 4. JavaScript
+dotnet run --project .\src\fsharp\app
 
 
+## 9. Go
 
-```powershell
 
-node .\\src\\javascript\\main.js
+go run .\src\go\main.go
 
-```
 
+## 10. Rust
 
 
-\## 5. TypeScript
+rustc .\src\rust\main.rs -o .\src\rust\main.exe
+.\src\rust\main.exe
 
 
+## 11. Bash
 
-```powershell
-
-tsc.cmd .\\src\\typescript\\main.ts --target ES2020 --outDir .\\src\\typescript\\dist
-
-node .\\src\\typescript\\dist\\main.js
-
-```
-
-
-
-\## 6. Java
-
-
-
-```powershell
-
-javac -encoding UTF-8 -d .\\src\\java .\\src\\java\\Main.java
-
-java -cp .\\src\\java Main
-
-```
-
-
-
-Просмотр байт-кода:
-
-
-
-```powershell
-
-javap -c -cp .\\src\\java Main
-
-```
-
-
-
-\## 7. C#
-
-
-
-```powershell
-
-dotnet build .\\src\\csharp\\app
-
-dotnet run --project .\\src\\csharp\\app
-
-```
-
-
-
-\## 8. F#
-
-
-
-```powershell
-
-dotnet build .\\src\\fsharp\\app
-
-dotnet run --project .\\src\\fsharp\\app
-
-```
-
-
-
-\## 9. Go
-
-
-
-```powershell
-
-go run .\\src\\go\\main.go
-
-```
-
-
-
-\## 10. Rust
-
-
-
-```powershell
-
-rustc .\\src\\rust\\main.rs -o .\\src\\rust\\main.exe
-
-.\\src\\rust\\main.exe
-
-```
-
-
-
-\## 11. Bash
-
-
-
-```powershell
 
 & "C:\Program Files\Git\bin\bash.exe" .\src\bash\main.sh
 
-```
+
+## 12. Prolog
 
 
-
-\## 12. Prolog
-
+& "C:\Program Files\swipl\bin\swipl.exe" -s .\src\prolog\main.pl
 
 
-```powershell
-
-& "C:\Program Files\swipl\bin\swipl.exe" -q -s .\src\prolog\main.pl
-
-```
+## 13. Assembler (x86-64)
 
 
-
-\## 13. Assembler (x86-64)
-
-
-
-```powershell
-
-as .\\src\\asm\\main.s -o .\\src\\asm\\main.o
-
-gcc .\\src\\asm\\main.o -o .\\src\\asm\\main.exe
-
-.\\src\\asm\\main.exe
-
-```
-
-
-
-\## Примечание
-
-
-
-Для C и C++ используются параметры UTF-8, чтобы кириллица корректно отображалась в консоли Windows. Bash запускается через Git for Windows, а Prolog — через установленный SWI-Prolog.
-
+as .\src\asm\main.s -o .\src\asm\main.o
+gcc .\src\asm\main.o -o .\src\asm\main.exe
+.\src\asm\main.exe
