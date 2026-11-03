@@ -2,17 +2,21 @@
 
 Все команды выполняются в PowerShell из корневого каталога проекта C:\VPD_Lab_01.
 
+Для вывода кириллицы в C и C++ выполни chcp 65001 один раз в текущем сеансе PowerShell.
+
 ## 1. C
 
 
-gcc -fexec-charset=UTF-8 .\src\c\main.c -o .\src\c\main.exe
+gcc -fexec-charset=UTF-8 .\src\c\main.c -o 
+.\src\c\main.exe
 .\src\c\main.exe
 
 
 ## 2. C++
 
 
-g++ -fexec-charset=UTF-8 .\src\cpp\main.cpp -o .\src\cpp\main.exe
+g++ -fexec-charset=UTF-8 .\src\cpp\main.cpp -o 
+.\src\cpp\main.exe
 .\src\cpp\main.exe
 
 
@@ -31,7 +35,8 @@ node .\src\javascript\main.js
 ## 5. TypeScript
 
 
-tsc.cmd .\src\typescript\main.ts --target ES2020 --outDir .\src\typescript\dist
+tsc.cmd .\src\typescript\main.ts --target ES2020 
+--outDir .\src\typescript\dist
 node .\src\typescript\dist\main.js
 
 
